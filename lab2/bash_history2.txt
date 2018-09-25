@@ -1,0 +1,60 @@
+    1  mkdir test
+    2  cd test/
+    3  touch file
+    4  ls -l
+    5  chmod a=0 file
+    6  chmod a0 file
+    7  chmod a= file
+    8  ls -l
+    9  echo "test" > ./file
+   10  cat file
+   11  chmod u+w file
+   12  ll
+   13  chmod g+w file
+   14  ll
+   15  chmod g=r file
+   16  ll
+   17  cat file
+   18  chmod u+r file
+   19  ls -l
+   20  cat file
+   21  echo "test" > ./file
+   22  cat file
+   23  mkdir dir
+   24  touch ./dir/new_file
+   25  echo "file 2" > ./dir/new_file
+   26  cd dir
+   27  ls
+   28  cat new_file 
+   29  cd ..
+   30  chmod a-x dir
+   31  ls ./dir/new_file 
+   32  chown root ./dir/new_file
+   33  chown root:root ./dir/new_file
+   34  man umask
+   35  umask 192
+   36  umask 300
+   37  touch file1
+   38  ls -l
+   39  rm file1
+   40  ls
+   41  umask 377
+   42  touch file1
+   43  ls -l
+   44  rm file1
+   45  umask 466
+   46  touch file1
+   47  ls -l
+   48  rm file1
+   49  umask 66
+   50  touch file1
+   51  ls -l
+   52  umask 0
+   53  touch file2
+   54  ls -l
+   55  su
+   56  cat file
+   57  su
+   58  cat file
+   59  cd
+   60  history > bash_history2.txt
