@@ -1,0 +1,38 @@
+    1  ldd /bin/ls | grep selinux
+    2  ls -l /etc/selinux/
+    3  ls -l /etc/selinux/targeted/
+    4  vi /etc/selinux/config
+    5  sestatus
+    6  getenforce
+    7  cat /sys/fs/selinux/enforce
+    8  setenforce 1
+    9  sudo setenforce 1
+   10  cat /sys/fs/selinux/enforce
+   11  sudo setenforce 0
+   12  cat /sys/fs/selinux/enforce
+   13  sudo setenforce 1
+   14  cat /proc/cmdline
+   15  seinfo
+   16  sudo yum install seinfo
+   17  yum search seinfo
+   18  sudo yum install setools-console
+   19  seinfo
+   20  seinfo -cfile -x
+   21  seinfo -cdir -x
+   22  seinfo -cblk_file -x
+   23  seinfo -cchr_file -x
+   24  seinfo -clnk_file -x
+   25  seinfo -cfifo_file -x
+   26  seinfo -csock_file -x
+   27  seinfo -cfilesystem -x
+   28  top
+   29  ps
+   30  ps -aux
+   31  ps -aux | grep firefox
+   32  ps -aux
+   33  cat /etc/selinux/targeted/contexts/files/file_contexts.homedirs
+   34  sudo semanage fcontext -l
+   35  cat /boot/config-3.10.0-957.el7.x86_64 
+   36  touch file
+   37  ls -Z file 
+   38  history > lab_selinux
